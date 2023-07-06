@@ -1,5 +1,6 @@
 package com.test.memo_record_application
 
+import android.content.Intent
 import android.graphics.BlendMode
 import android.graphics.BlendModeColorFilter
 import android.graphics.Color
@@ -19,6 +20,24 @@ class MemoActivity : AppCompatActivity() {
 
         activityMemoBinding.run {
             toolbarMemo.run {
+                title = "메모 읽기"
+                setTitleTextColor(Color.WHITE)
+                inflateMenu(R.menu.memo_menu)
+
+                setOnMenuItemClickListener {
+                    when(it.itemId) {
+                        R.id.menuAdd -> {
+                            var memoAddIntent = Intent(this@MemoActivity,MemoAddActivity::class.java)
+                            startActivity(memoAddIntent)
+
+                            false
+                        }
+                        else -> {
+                            false
+                        }
+                    }
+                }
+
                 // back button 세팅
                 setNavigationIcon(androidx.appcompat.R.drawable.abc_ic_ab_back_material)
 
