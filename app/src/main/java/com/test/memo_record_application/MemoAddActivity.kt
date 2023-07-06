@@ -23,6 +23,18 @@ class MemoAddActivity : AppCompatActivity() {
                 setTitleTextColor(Color.WHITE)
                 inflateMenu(R.menu.add_menu)
 
+                setOnMenuItemClickListener {
+                    when(it.itemId) {
+                        R.id.menuSave -> {
+                            // 메모 저장 후 이전 화면으로 돌아가기
+                            false
+                        }
+                        else -> {
+                            false
+                        }
+                    }
+                }
+
                 // back button 세팅
                 setNavigationIcon(androidx.appcompat.R.drawable.abc_ic_ab_back_material)
 
