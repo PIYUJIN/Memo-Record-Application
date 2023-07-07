@@ -62,11 +62,6 @@ class MainActivity : AppCompatActivity() {
         memoList = DAO.selectAllData(this)
         count = memoList.size+1
 
-        for(memo in 0 until memoList.size) {
-            Log.d("lion","memo idx : ${memoList[memo].idx}")
-            Log.d("lion","memo : ${memoList[memo].nameData}")
-        }
-
         var adapter = activityMainBinding.recyclerViewMain.adapter as RecyclerViewAdapter
         adapter.notifyDataSetChanged()
 
