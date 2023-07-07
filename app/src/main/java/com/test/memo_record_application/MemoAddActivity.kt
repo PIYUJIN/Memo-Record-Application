@@ -7,7 +7,6 @@ import android.graphics.PorterDuff
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.test.memo_record_application.MemoClass.Companion.count
 import com.test.memo_record_application.databinding.ActivityMemoAddBinding
 import java.text.SimpleDateFormat
@@ -43,7 +42,6 @@ class MemoAddActivity : AppCompatActivity() {
 
                             DAO.insertData(this@MemoAddActivity,MemoInfo(count,editName,editContent,now))
                             count++
-                            Log.d("lion","count : $count")
 
                             finish()
                             false

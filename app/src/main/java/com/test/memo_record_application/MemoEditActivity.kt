@@ -7,7 +7,6 @@ import android.graphics.PorterDuff
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.test.memo_record_application.databinding.ActivityMemoEditBinding
 
 class MemoEditActivity : AppCompatActivity() {
